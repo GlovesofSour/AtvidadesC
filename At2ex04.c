@@ -6,21 +6,27 @@ imprima: “Empréstimo não concedido.”, caso contrário, imprima: “Emprés
 
 int main(){
 
-    float salario, emprestimo, limite;
-
+    float salario, prestacao, porcentagem;
+    
+    printf("--------------------------------\n");
+    printf("    SIMULADOR DE EMPRESTIMOS\n");
+    printf("--------------------------------\n");
+    
     printf("Digite o seu salario: ");
     scanf("%f", &salario);
-    printf("Digite o valor do emprestimo que voce quer receber: ");
-    scanf("%f", &emprestimo);
+    printf("Digite o valor da prestacao: ");
+    scanf("%f", &prestacao);
+    printf("Valor do salario: %d, valor da prestacao: %d\n");
+    printf("--------------------------------\n");
+    porcentagem = salario * 20 / 100;
 
-    limite = salario * 20 / 100;
-    limite = salario + limite;
-
-    if(emprestimo > limite){
+    if(prestacao > porcentagem){
         printf("Valor acima do limite, emprestimo nao concedido");
     }else{
         printf("Emprestimo concedido");
     }
-
+    
+     printf("--------------------------------\n");
+    
     return 0;
 }
